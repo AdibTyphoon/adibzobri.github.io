@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Adib Bin Ahmad Zobri | Netcentric Computing Student & Aspiring Software, Cloud & Network Engineer</title>
+<meta name="description" content="Portfolio of Muhammad Adib Bin Ahmad Zobri, a final-year Netcentric Computing student at UiTM open for an IT internship in software development, cloud engineering and network infrastructure.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','sans-serif'], sans: ['Inter','sans-serif'] } } } }
+</script>
+<style>
+  body { background:#0b1017; background-image: radial-gradient(60rem 30rem at 85% -5%, rgba(34,211,238,.10), transparent 60%), radial-gradient(50rem 30rem at -10% 40%, rgba(16,185,129,.08), transparent 60%); background-attachment: fixed; }
+  .glass { background: rgba(30,41,59,.45); border:1px solid rgba(148,163,184,.14); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .glass-hover { transition: border-color .25s, transform .25s; }
+  .glass-hover:hover { border-color: rgba(34,211,238,.45); transform: translateY(-2px); }
+  .chip { border:1px solid rgba(148,163,184,.2); background: rgba(15,23,42,.6); }
+  .filter-btn[aria-pressed="true"] { background: rgba(34,211,238,.15); color:#67e8f9; border-color: rgba(34,211,238,.5); }
+  a:focus-visible, button:focus-visible { outline:2px solid #22d3ee; outline-offset:3px; border-radius:.5rem; }
+  .pulse-dot { animation: pulse 2s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)} 70%{box-shadow:0 0 0 8px rgba(52,211,153,0)} 100%{box-shadow:0 0 0 0 rgba(52,211,153,0)} }
+  #toast { transition: opacity .3s, transform .3s; }
+  @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto!important} .pulse-dot{animation:none} * {transition:none!important} }
+</style>
+</head>
+<body class="font-sans text-slate-300 antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header class="sticky top-0 z-40 glass border-x-0 border-t-0">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between" aria-label="Main">
+    <a href="#home" class="font-display text-lg font-bold text-white">Adib<span class="text-cyan-400">.</span>Zobri</a>
+    <ul class="hidden md:flex items-center gap-7 text-sm">
+      <li><a class="hover:text-cyan-300 transition" href="#about">About</a></li>
+      <li><a class="hover:text-cyan-300 transition" href="#skills">Skills</a></li>
+      <li><a class="hover:text-cyan-300 transition" href="#projects">Projects</a></li>
+      <li><a class="hover:text-cyan-300 transition" href="#leadership">Leadership</a></li>
+      <li><a class="rounded-lg bg-cyan-400 text-slate-900 font-semibold px-4 py-2 hover:bg-cyan-300 transition" href="#contact">Contact</a></li>
+    </ul>
+    <button id="menuBtn" class="md:hidden p-2 text-slate-200" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu"></i></button>
+  </nav>
+  <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-1 text-sm">
+    <li><a class="block py-2" href="#about">About</a></li>
+    <li><a class="block py-2" href="#skills">Skills</a></li>
+    <li><a class="block py-2" href="#projects">Projects</a></li>
+    <li><a class="block py-2" href="#leadership">Leadership</a></li>
+    <li><a class="block py-2 text-cyan-300 font-semibold" href="#contact">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="home" class="max-w-6xl mx-auto px-5 pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-[1.4fr_1fr] gap-12 items-center">
+  <div>
+    <p class="inline-flex items-center gap-2 chip rounded-full px-4 py-1.5 text-xs sm:text-sm text-emerald-300">
+      <span class="pulse-dot w-2 h-2 rounded-full bg-emerald-400"></span>
+      Open for IT Internship (Software Development, Cloud Engineering &amp; Network Infrastructure)
+    </p>
+    <h1 class="font-display font-bold text-white text-4xl sm:text-6xl leading-[1.05] mt-6">Adib Zobri</h1>
+    <p class="mt-4 text-lg sm:text-xl text-cyan-300 font-display">Final-Year Netcentric Computing Student | Aspiring Software, Cloud &amp; Network Engineer</p>
+    <p class="mt-5 max-w-xl text-slate-400">I build full-stack web applications and backend APIs, and I'm growing into cloud and network engineering.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#projects" class="rounded-lg bg-cyan-400 text-slate-900 font-semibold px-5 py-3 hover:bg-cyan-300 transition inline-flex items-center gap-2"><i data-lucide="folder-code" class="w-4 h-4"></i>View projects</a>
+      <a href="#contact" class="rounded-lg glass px-5 py-3 text-white hover:border-cyan-400/50 transition inline-flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>Get in touch</a>
+    </div>
+    <p class="mt-6 text-sm text-slate-400 inline-flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>Cyberjaya, Selangor, Malaysia</p>
+  </div>
+  <!-- PROFILE PHOTO -->
+<div class="glass rounded-3xl aspect-square max-w-xs w-full mx-auto flex items-center justify-center overflow-hidden">
+  <img src="adib-profile.jpg" alt="Adib Zobri" class="w-full h-full object-cover object-top">
+</div>
+</section>
+
+<!-- ============ ABOUT & EDUCATION ============ -->
+<section id="about" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="font-display text-3xl font-bold text-white">About me</h2>
+  <div class="mt-8 grid lg:grid-cols-2 gap-6">
+    <div class="glass rounded-2xl p-6 space-y-4">
+      <p>I'm a final-year Bachelor of Science (Hons.) in Netcentric Computing student at Universiti Teknologi MARA (UiTM) Cawangan Perlis, with a Diploma in Computer Science background.</p>
+      <p>I'm passionate about full-stack web development, backend API architecture, cloud engineering, and network infrastructure.</p>
+      <p>I've led student organizations and coordinated large-scale events alongside my technical software engineering projects.</p>
+    </div>
+    <div class="space-y-4">
+      <article class="glass glass-hover rounded-2xl p-6">
+        <div class="flex items-start gap-3">
+          <i data-lucide="graduation-cap" class="text-cyan-400 mt-1 shrink-0"></i>
+          <div>
+            <h3 class="font-display text-lg text-white font-semibold">Universiti Teknologi MARA (UiTM) Cawangan Perlis</h3>
+            <p class="text-slate-200">Bachelor of Science (Hons.) in Netcentric Computing</p>
+            <p class="text-sm text-slate-400">March 2025 – August 2028 (Expected)</p>
+            <p class="mt-3 text-sm"><span class="text-emerald-300 font-semibold">CGPA: 3.61 / 4.00</span> &nbsp;|&nbsp; Dean's List Award (February 2026 &amp; July 2026)</p>
+          </div>
+        </div>
+      </article>
+      <article class="glass glass-hover rounded-2xl p-6">
+        <div class="flex items-start gap-3">
+          <i data-lucide="book-open" class="text-cyan-400 mt-1 shrink-0"></i>
+          <div>
+            <h3 class="font-display text-lg text-white font-semibold">Universiti Teknologi MARA (UiTM) Cawangan Perlis</h3>
+            <p class="text-slate-200">Diploma in Computer Science</p>
+            <p class="text-sm text-slate-400">March 2022 – March 2025 (Graduated)</p>
+            <p class="mt-3 text-sm"><span class="text-emerald-300 font-semibold">CGPA: 2.99 / 4.00</span></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="font-display text-3xl font-bold text-white">Technical skills</h2>
+  <div class="mt-8 grid sm:grid-cols-2 gap-6">
+    <div class="glass glass-hover rounded-2xl p-6">
+      <h3 class="flex items-center gap-2 font-display text-white font-semibold"><i data-lucide="code-2" class="text-cyan-400 w-5 h-5"></i>Programming &amp; Web/Mobile</h3>
+      <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+        <li class="chip rounded-full px-3 py-1">PHP</li><li class="chip rounded-full px-3 py-1">Laravel</li><li class="chip rounded-full px-3 py-1">JavaScript</li><li class="chip rounded-full px-3 py-1">Python</li><li class="chip rounded-full px-3 py-1">HTML5</li><li class="chip rounded-full px-3 py-1">CSS3</li><li class="chip rounded-full px-3 py-1">Tailwind CSS</li><li class="chip rounded-full px-3 py-1">Java</li><li class="chip rounded-full px-3 py-1">Kotlin (Android Studio)</li>
+      </ul>
+    </div>
+    <div class="glass glass-hover rounded-2xl p-6">
+      <h3 class="flex items-center gap-2 font-display text-white font-semibold"><i data-lucide="database" class="text-emerald-400 w-5 h-5"></i>Backend &amp; Database</h3>
+      <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+        <li class="chip rounded-full px-3 py-1">MySQL</li><li class="chip rounded-full px-3 py-1">RESTful API Development</li><li class="chip rounded-full px-3 py-1">Role-Based Access Control (RBAC)</li>
+      </ul>
+    </div>
+    <div class="glass glass-hover rounded-2xl p-6">
+      <h3 class="flex items-center gap-2 font-display text-white font-semibold"><i data-lucide="cloud" class="text-cyan-400 w-5 h-5"></i>Cloud, Network &amp; Tools</h3>
+      <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+        <li class="chip rounded-full px-3 py-1">AWS Cloud</li><li class="chip rounded-full px-3 py-1">Cloud Engineering</li><li class="chip rounded-full px-3 py-1">Network Infrastructure</li><li class="chip rounded-full px-3 py-1">DevOps</li><li class="chip rounded-full px-3 py-1">Git &amp; GitHub</li><li class="chip rounded-full px-3 py-1">Agile</li>
+      </ul>
+    </div>
+    <div class="glass glass-hover rounded-2xl p-6">
+      <h3 class="flex items-center gap-2 font-display text-white font-semibold"><i data-lucide="users" class="text-emerald-400 w-5 h-5"></i>Soft skills</h3>
+      <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+        <li class="chip rounded-full px-3 py-1">Leadership</li><li class="chip rounded-full px-3 py-1">Problem-Solving</li><li class="chip rounded-full px-3 py-1">Cross-Functional Teamwork</li><li class="chip rounded-full px-3 py-1">Time Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="max-w-6xl mx-auto px-5 py-16">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <h2 class="font-display text-3xl font-bold text-white">Featured projects</h2>
+    <div class="flex gap-2 text-sm" role="group" aria-label="Filter projects">
+      <button class="filter-btn chip rounded-full px-4 py-1.5 transition" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn chip rounded-full px-4 py-1.5 transition" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+      <button class="filter-btn chip rounded-full px-4 py-1.5 transition" data-filter="backend" aria-pressed="false">Backend</button>
+    </div>
+  </div>
+
+  <div class="mt-8 grid lg:grid-cols-2 gap-6">
+    <article class="project glass glass-hover rounded-2xl p-6 flex flex-col" data-cat="fullstack">
+      <p class="text-sm text-emerald-300">2026 | Full-Stack Developer / Final Year Project</p>
+      <h3 class="font-display text-xl font-semibold text-white mt-2">BillSync — Centralized Billing &amp; Subscription Aggregation Platform</h3>
+      <p class="mt-3 text-sm">A full-stack platform that helps households manage recurring utilities and multi-commitment expenses in one place, with automated bill categorization, due-date tracking, and a unified analytics dashboard.</p>
+      <ul class="mt-4 flex flex-wrap gap-2 text-xs"><li class="chip rounded-full px-3 py-1">Laravel</li><li class="chip rounded-full px-3 py-1">PHP</li><li class="chip rounded-full px-3 py-1">Tailwind CSS</li><li class="chip rounded-full px-3 py-1">JavaScript</li><li class="chip rounded-full px-3 py-1">MySQL</li></ul>
+      <div class="mt-5 flex gap-4 text-sm mt-auto pt-2">
+        <button class="open-modal text-cyan-300 hover:text-cyan-200 inline-flex items-center gap-1" data-id="billsync"><i data-lucide="panel-top-open" class="w-4 h-4"></i>View details</button>
+        <!-- LIVE DEMO / REPO: replace # with your BillSync live demo URL or GitHub repo link -->
+        <a href="#" class="text-slate-400 hover:text-white inline-flex items-center gap-1"><i data-lucide="external-link" class="w-4 h-4"></i>Live demo</a>
+      </div>
+    </article>
+
+    <article class="project glass glass-hover rounded-2xl p-6 flex flex-col" data-cat="backend">
+      <p class="text-sm text-emerald-300">2026 | Back-End Developer</p>
+      <h3 class="font-display text-xl font-semibold text-white mt-2">Web-Based SmartCampus Directory &amp; Room Reservation Hub</h3>
+      <p class="mt-3 text-sm">A centralized campus directory and room reservation system for UiTM Arau across 6 core modules, built on Laravel and a 4-table MySQL relational database, with conflict-free booking and QR-linked facility info.</p>
+      <ul class="mt-4 flex flex-wrap gap-2 text-xs"><li class="chip rounded-full px-3 py-1">Laravel</li><li class="chip rounded-full px-3 py-1">RESTful API</li><li class="chip rounded-full px-3 py-1">RBAC</li><li class="chip rounded-full px-3 py-1">MySQL</li><li class="chip rounded-full px-3 py-1">QR Code API</li></ul>
+      <div class="mt-5 flex gap-4 text-sm mt-auto pt-2">
+        <button class="open-modal text-cyan-300 hover:text-cyan-200 inline-flex items-center gap-1" data-id="smartcampus"><i data-lucide="panel-top-open" class="w-4 h-4"></i>View details</button>
+        <!-- LIVE DEMO / REPO: replace # with your SmartCampus live demo URL or GitHub repo link -->
+        <a href="#" class="text-slate-400 hover:text-white inline-flex items-center gap-1"><i data-lucide="external-link" class="w-4 h-4"></i>Live demo</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP ============ -->
+<section id="leadership" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="font-display text-3xl font-bold text-white">Leadership &amp; achievements</h2>
+  <div class="mt-8 grid lg:grid-cols-2 gap-6">
+    <article class="glass glass-hover rounded-2xl p-6">
+      <i data-lucide="award" class="text-cyan-400"></i>
+      <h3 class="font-display text-lg font-semibold text-white mt-3">President, Sekretariat Rukun Negara (SRN), UiTM</h3>
+      <p class="text-sm text-emerald-300">2025 – 2026</p>
+      <p class="mt-3 text-sm">Directed club governance, strategic planning, and cross-organization partnerships. Spearheaded Hari Sukan Tradisional 2026 and led an official delegation to Jabatan Perpaduan Negara dan Integrasi Nasional (JPNIN).</p>
+    </article>
+    <article class="glass glass-hover rounded-2xl p-6">
+      <i data-lucide="hand-heart" class="text-emerald-400"></i>
+      <h3 class="font-display text-lg font-semibold text-white mt-3">Event Volunteer</h3>
+      <p class="text-sm text-emerald-300">SUKMA XXII &amp; Para SUKMA Selangor 2026 &amp; Jelajah Belia Rukun Negara 2026</p>
+      <p class="mt-3 text-sm">Coordinated event logistics, crowd flow, and participant operations.</p>
+    </article>
+    <article class="glass glass-hover rounded-2xl p-6 lg:col-span-2">
+      <i data-lucide="trophy" class="text-cyan-400"></i>
+      <h3 class="font-display text-lg font-semibold text-white mt-3">Dean's List Award</h3>
+      <p class="mt-2 text-sm">February 2026 and July 2026, with a CGPA of 3.61 / 4.00 in the Bachelor of Science (Hons.) in Netcentric Computing.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="max-w-6xl mx-auto px-5 py-16">
+  <div class="glass rounded-3xl p-8 sm:p-12">
+    <h2 class="font-display text-3xl font-bold text-white">Let's talk about an internship</h2>
+    <p class="mt-3 max-w-xl text-slate-400">I'm looking for an IT internship in software development, cloud engineering, or network infrastructure. Send me a message and I'll reply as soon as I can.</p>
+    <div class="mt-8 grid sm:grid-cols-2 gap-4 text-sm">
+      <div class="chip rounded-xl p-4 flex items-center justify-between gap-3">
+        <span class="flex items-center gap-3 min-w-0"><i data-lucide="mail" class="text-cyan-400 shrink-0"></i><a id="emailText" href="mailto:2025928489@student.uitm.edu.my" class="truncate hover:text-cyan-300">2025928489@student.uitm.edu.my</a></span>
+        <button id="copyEmail" class="shrink-0 rounded-lg bg-cyan-400/15 text-cyan-300 px-3 py-1.5 hover:bg-cyan-400/25 transition inline-flex items-center gap-1"><i data-lucide="copy" class="w-4 h-4"></i>Copy email</button>
+      </div>
+      <a href="tel:+601128402800" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition"><i data-lucide="phone" class="text-cyan-400"></i>011-28402800</a>
+      <a href="https://www.linkedin.com/in/adib-zobri-927a513b6" target="_blank" rel="noopener noreferrer" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition"><i data-lucide="linkedin" class="text-cyan-400"></i>LinkedIn: adib-zobri</a>
+      <!-- GITHUB: replace the # below with https://github.com/YOUR-USERNAME -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition"><i data-lucide="github" class="text-cyan-400"></i>GitHub</a>
+      <p class="chip rounded-xl p-4 flex items-center gap-3 sm:col-span-2"><i data-lucide="map-pin" class="text-emerald-400"></i>Cyberjaya, Selangor, Malaysia</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
+  <p>&copy; <span id="year"></span> Muhammad Adib Bin Ahmad Zobri. All rights reserved.</p>
+</footer>
+
+<!-- ============ PROJECT MODAL ============ -->
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center p-5 bg-slate-950/80 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="glass rounded-2xl max-w-xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 relative" style="background:rgba(15,23,42,.95)">
+    <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="Close details"><i data-lucide="x"></i></button>
+    <p id="modalMeta" class="text-sm text-emerald-300"></p>
+    <h3 id="modalTitle" class="font-display text-2xl font-semibold text-white mt-1 pr-8"></h3>
+    <ul id="modalPoints" class="mt-4 space-y-3 text-sm list-disc pl-5 marker:text-cyan-400"></ul>
+    <ul id="modalStack" class="mt-5 flex flex-wrap gap-2 text-xs"></ul>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 pointer-events-none z-50 rounded-lg bg-emerald-400 text-slate-900 font-semibold px-5 py-3 text-sm shadow-lg">Email copied to clipboard</div>
+
+<script>
+  lucide.createIcons();
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', false); }));
+
+  // Project filter
+  const filterBtns = document.querySelectorAll('.filter-btn'), projects = document.querySelectorAll('.project');
+  filterBtns.forEach(btn => btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.setAttribute('aria-pressed', b === btn));
+    projects.forEach(p => p.classList.toggle('hidden', btn.dataset.filter !== 'all' && p.dataset.cat !== btn.dataset.filter));
+  }));
+
+  // Project modal
+  const data = {
+    billsync: {
+      meta: '2026 | Full-Stack Developer / Final Year Project',
+      title: 'BillSync — Centralized Billing & Subscription Aggregation Platform',
+      points: ['Built a full-stack billing aggregation platform using Laravel MVC, Tailwind CSS, JavaScript, and MySQL to help households manage recurring utilities and multi-commitment expenses.', 'Engineered automated bill categorization, due-date tracking, and a unified analytics dashboard for clear monthly financial visibility.'],
+      stack: ['Laravel','PHP','Tailwind CSS','JavaScript','MySQL']
+    },
+    smartcampus: {
+      meta: '2026 | Back-End Developer',
+      title: 'Web-Based SmartCampus Directory & Room Reservation Hub',
+      points: ['Architected a centralized campus directory and room reservation system for UiTM Arau across 6 core modules using Laravel and a 4-table MySQL relational database.', 'Implemented a secure RESTful API with Role-Based Access Control (RBAC), conditional booking validation logic to prevent scheduling conflicts, and an admin analytics dashboard.', 'Integrated an external QR Code Generator API linking physical campus spaces to real-time digital facility info and instant booking workflows.'],
+      stack: ['Laravel','RESTful API','RBAC','MySQL','QR Code API']
+    }
+  };
+  const modal = document.getElementById('modal');
+  let lastFocus;
+  function openModal(id) {
+    const d = data[id]; lastFocus = document.activeElement;
+    document.getElementById('modalMeta').textContent = d.meta;
+    document.getElementById('modalTitle').textContent = d.title;
+    document.getElementById('modalPoints').innerHTML = d.points.map(p => `<li>${p}</li>`).join('');
+    document.getElementById('modalStack').innerHTML = d.stack.map(s => `<li class="chip rounded-full px-3 py-1">${s}</li>`).join('');
+    modal.classList.remove('hidden'); modal.classList.add('flex');
+    document.getElementById('closeModal').focus();
+  }
+  function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); if (lastFocus) lastFocus.focus(); }
+  document.querySelectorAll('.open-modal').forEach(b => b.addEventListener('click', () => openModal(b.dataset.id)));
+  document.getElementById('closeModal').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+
+  // Copy email + toast
+  const toast = document.getElementById('toast');
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.remove('opacity-0', 'translate-y-4');
+    clearTimeout(showToast.t);
+    showToast.t = setTimeout(() => toast.classList.add('opacity-0', 'translate-y-4'), 2200);
+  }
+  document.getElementById('copyEmail').addEventListener('click', async () => {
+    const email = document.getElementById('emailText').textContent.trim();
+    try { await navigator.clipboard.writeText(email); showToast('Email copied to clipboard'); }
+    catch (err) {
+      const t = document.createElement('textarea'); t.value = email; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); showToast('Email copied to clipboard'); } catch (e) { showToast('Copy failed. Select the email and copy it manually.'); }
+      t.remove();
+    }
+  });
+</script>
+</body>
+</html>
