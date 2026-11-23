@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Muhammad Adib Bin Ahmad Zobri | Netcentric Computing Student & Aspiring Software, Cloud & Network Engineer</title>
+<title>Adib Zobri | Netcentric Computing Student & Aspiring Software, Cloud & Network Engineer</title>
 <meta name="description" content="Portfolio of Muhammad Adib Bin Ahmad Zobri, a final-year Netcentric Computing student at UiTM open for an IT internship in software development, cloud engineering and network infrastructure.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -12,19 +12,7 @@
 <script>
 tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','sans-serif'], sans: ['Inter','sans-serif'] } } } }
 </script>
-<style>
-  body { background:#0b1017; background-image: radial-gradient(60rem 30rem at 85% -5%, rgba(34,211,238,.10), transparent 60%), radial-gradient(50rem 30rem at -10% 40%, rgba(16,185,129,.08), transparent 60%); background-attachment: fixed; }
-  .glass { background: rgba(30,41,59,.45); border:1px solid rgba(148,163,184,.14); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-  .glass-hover { transition: border-color .25s, transform .25s; }
-  .glass-hover:hover { border-color: rgba(34,211,238,.45); transform: translateY(-2px); }
-  .chip { border:1px solid rgba(148,163,184,.2); background: rgba(15,23,42,.6); }
-  .filter-btn[aria-pressed="true"] { background: rgba(34,211,238,.15); color:#67e8f9; border-color: rgba(34,211,238,.5); }
-  a:focus-visible, button:focus-visible { outline:2px solid #22d3ee; outline-offset:3px; border-radius:.5rem; }
-  .pulse-dot { animation: pulse 2s infinite; }
-  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)} 70%{box-shadow:0 0 0 8px rgba(52,211,153,0)} 100%{box-shadow:0 0 0 0 rgba(52,211,153,0)} }
-  #toast { transition: opacity .3s, transform .3s; }
-  @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto!important} .pulse-dot{animation:none} * {transition:none!important} }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="font-sans text-slate-300 antialiased">
 
@@ -67,10 +55,11 @@ tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','
     </div>
     <p class="mt-6 text-sm text-slate-400 inline-flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>Cyberjaya, Selangor, Malaysia</p>
   </div>
-  <!-- PROFILE PHOTO -->
-<div class="glass rounded-3xl aspect-square max-w-xs w-full mx-auto flex items-center justify-center overflow-hidden">
-  <img src="adib-profile.jpg" alt="Adib Zobri" class="w-full h-full object-cover object-top">
-</div>
+  <!-- PROFILE PHOTO: adib-profile.jpg must sit in the same folder as index.html -->
+  <div class="profile-frame glass rounded-3xl mx-auto flex items-center justify-center">
+    <span class="font-display text-7xl font-bold bg-gradient-to-br from-cyan-300 to-emerald-400 bg-clip-text text-transparent" aria-hidden="true">AZ</span>
+    <img src="adib-profile.jpg" alt="Portrait of Muhammad Adib Bin Ahmad Zobri" class="w-full h-full object-cover object-top" onerror="this.remove()">
+  </div>
 </section>
 
 <!-- ============ ABOUT & EDUCATION ============ -->
@@ -213,18 +202,8 @@ tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','
         <button id="copyEmail" class="shrink-0 rounded-lg bg-cyan-400/15 text-cyan-300 px-3 py-1.5 hover:bg-cyan-400/25 transition inline-flex items-center gap-1"><i data-lucide="copy" class="w-4 h-4"></i>Copy email</button>
       </div>
       <a href="tel:+601128402800" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition"><i data-lucide="phone" class="text-cyan-400"></i>011-28402800</a>
-      <a href="https://www.linkedin.com/in/muhammad-adib-ahmad-zobri-927a513b6" target="_blank" rel="noopener noreferrer" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition">
-        <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5ZM6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z"/>
-        </svg>
-        <span class="truncate">LinkedIn: muhammad-adib-ahmad-zobri</span>
-      </a>
-      <a href="https://github.com/AdibTyphoon" target="_blank" rel="noopener noreferrer" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition">
-        <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/>
-        </svg>
-        <span class="truncate">GitHub: AdibTyphoon</span>
-      </a>
+      <a href="https://www.linkedin.com/in/muhammad-adib-ahmad-zobri-927a513b6" target="_blank" rel="noopener noreferrer" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition"><svg class="w-6 h-6 text-cyan-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+      <a href="https://github.com/AdibTyphoon" target="_blank" rel="noopener noreferrer" class="chip rounded-xl p-4 flex items-center gap-3 hover:border-cyan-400/50 transition"><svg class="w-6 h-6 text-cyan-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1-.3-3 1-2.6-.5-5.4-.5-8 0-2-1.3-3-1-3-1-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>GitHub: AdibTyphoon</a>
       <p class="chip rounded-xl p-4 flex items-center gap-3 sm:col-span-2"><i data-lucide="map-pin" class="text-emerald-400"></i>Cyberjaya, Selangor, Malaysia</p>
     </div>
   </div>
@@ -250,74 +229,6 @@ tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','
 <!-- ============ TOAST ============ -->
 <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 pointer-events-none z-50 rounded-lg bg-emerald-400 text-slate-900 font-semibold px-5 py-3 text-sm shadow-lg">Email copied to clipboard</div>
 
-<script>
-  lucide.createIcons();
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile menu
-  const menuBtn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('hidden') === false;
-    menuBtn.setAttribute('aria-expanded', open);
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', false); }));
-
-  // Project filter
-  const filterBtns = document.querySelectorAll('.filter-btn'), projects = document.querySelectorAll('.project');
-  filterBtns.forEach(btn => btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.setAttribute('aria-pressed', b === btn));
-    projects.forEach(p => p.classList.toggle('hidden', btn.dataset.filter !== 'all' && p.dataset.cat !== btn.dataset.filter));
-  }));
-
-  // Project modal
-  const data = {
-    billsync: {
-      meta: '2026 | Full-Stack Developer / Final Year Project',
-      title: 'BillSync — Centralized Billing & Subscription Aggregation Platform',
-      points: ['Built a full-stack billing aggregation platform using Laravel MVC, Tailwind CSS, JavaScript, and MySQL to help households manage recurring utilities and multi-commitment expenses.', 'Engineered automated bill categorization, due-date tracking, and a unified analytics dashboard for clear monthly financial visibility.'],
-      stack: ['Laravel','PHP','Tailwind CSS','JavaScript','MySQL']
-    },
-    smartcampus: {
-      meta: '2026 | Back-End Developer',
-      title: 'Web-Based SmartCampus Directory & Room Reservation Hub',
-      points: ['Architected a centralized campus directory and room reservation system for UiTM Arau across 6 core modules using Laravel and a 4-table MySQL relational database.', 'Implemented a secure RESTful API with Role-Based Access Control (RBAC), conditional booking validation logic to prevent scheduling conflicts, and an admin analytics dashboard.', 'Integrated an external QR Code Generator API linking physical campus spaces to real-time digital facility info and instant booking workflows.'],
-      stack: ['Laravel','RESTful API','RBAC','MySQL','QR Code API']
-    }
-  };
-  const modal = document.getElementById('modal');
-  let lastFocus;
-  function openModal(id) {
-    const d = data[id]; lastFocus = document.activeElement;
-    document.getElementById('modalMeta').textContent = d.meta;
-    document.getElementById('modalTitle').textContent = d.title;
-    document.getElementById('modalPoints').innerHTML = d.points.map(p => `<li>${p}</li>`).join('');
-    document.getElementById('modalStack').innerHTML = d.stack.map(s => `<li class="chip rounded-full px-3 py-1">${s}</li>`).join('');
-    modal.classList.remove('hidden'); modal.classList.add('flex');
-    document.getElementById('closeModal').focus();
-  }
-  function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); if (lastFocus) lastFocus.focus(); }
-  document.querySelectorAll('.open-modal').forEach(b => b.addEventListener('click', () => openModal(b.dataset.id)));
-  document.getElementById('closeModal').addEventListener('click', closeModal);
-  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
-
-  // Copy email + toast
-  const toast = document.getElementById('toast');
-  function showToast(msg) {
-    toast.textContent = msg;
-    toast.classList.remove('opacity-0', 'translate-y-4');
-    clearTimeout(showToast.t);
-    showToast.t = setTimeout(() => toast.classList.add('opacity-0', 'translate-y-4'), 2200);
-  }
-  document.getElementById('copyEmail').addEventListener('click', async () => {
-    const email = document.getElementById('emailText').textContent.trim();
-    try { await navigator.clipboard.writeText(email); showToast('Email copied to clipboard'); }
-    catch (err) {
-      const t = document.createElement('textarea'); t.value = email; document.body.appendChild(t); t.select();
-      try { document.execCommand('copy'); showToast('Email copied to clipboard'); } catch (e) { showToast('Copy failed. Select the email and copy it manually.'); }
-      t.remove();
-    }
-  });
-</script>
+<script src="js/app.js" defer></script>
 </body>
 </html>
