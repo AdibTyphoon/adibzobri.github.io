@@ -12,7 +12,7 @@
 <script>
 tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','sans-serif'], sans: ['Inter','sans-serif'] } } } }
 </script>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="font-sans text-slate-300 antialiased">
 
@@ -56,10 +56,10 @@ tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','
     <p class="mt-6 text-sm text-slate-400 inline-flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>Cyberjaya, Selangor, Malaysia</p>
   </div>
   <!-- PROFILE PHOTO: adib-profile.jpg must sit in the same folder as index.html -->
-  <div class="profile-frame glass rounded-3xl mx-auto flex items-center justify-center">
-    <span class="font-display text-7xl font-bold bg-gradient-to-br from-cyan-300 to-emerald-400 bg-clip-text text-transparent" aria-hidden="true">AZ</span>
-    <img src="adib-profile.jpg" alt="Portrait of Muhammad Adib Bin Ahmad Zobri" class="w-full h-full object-cover object-top" onerror="this.remove()">
-  </div>
+<div class="profile-frame relative overflow-hidden glass rounded-3xl mx-auto flex items-center justify-center">
+  <span class="font-display text-7xl font-bold bg-gradient-to-br from-cyan-300 to-emerald-400 bg-clip-text text-transparent" aria-hidden="true">AZ</span>
+  <img src="adib-profile.jpg" alt="Portrait of Muhammad Adib Bin Ahmad Zobri" class="absolute inset-0 w-full h-full object-cover object-top" onerror="this.remove()">
+</div>
 </section>
 
 <!-- ============ ABOUT & EDUCATION ============ -->
@@ -229,6 +229,6 @@ tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','
 <!-- ============ TOAST ============ -->
 <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 pointer-events-none z-50 rounded-lg bg-emerald-400 text-slate-900 font-semibold px-5 py-3 text-sm shadow-lg">Email copied to clipboard</div>
 
-<script src="js/app.js" defer></script>
+<script src="app.js" defer></script>
 </body>
 </html>
