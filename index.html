@@ -56,10 +56,10 @@ tailwind.config = { theme: { extend: { fontFamily: { display: ['Space Grotesk','
     <p class="mt-6 text-sm text-slate-400 inline-flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>Cyberjaya, Selangor, Malaysia</p>
   </div>
 
-  <!-- PROFILE PHOTO: Tanpa border / kotak, blend terus dengan background -->
+  <!-- PROFILE PHOTO: Full image tanpa mask terpotong -->
   <div class="relative mx-auto w-full max-w-md flex items-center justify-center">
     <div class="absolute -inset-4 rounded-full bg-cyan-500/15 blur-3xl pointer-events-none" aria-hidden="true"></div>
-    <img src="adib-profile.png" alt="Portrait of Muhammad Adib Bin Ahmad Zobri" class="relative w-full h-auto max-h-[420px] object-cover object-top rounded-2xl [mask-image:radial-gradient(ellipse_85%_85%_at_50%_45%,black_65%,transparent_100%)]">
+    <img src="adib-profile.png" alt="Portrait of Muhammad Adib Bin Ahmad Zobri" class="relative w-full h-auto object-contain rounded-2xl">
   </div>
 </section>
 
